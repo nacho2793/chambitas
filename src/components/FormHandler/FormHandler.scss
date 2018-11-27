@@ -1,3 +1,4 @@
+@import '../../styles/constants';
 @import '../../styles/mixins';
 
 .create-users {
@@ -8,6 +9,7 @@
   border-radius: 5px;
   padding: .5rem;
   font-size: 1rem;
+  box-shadow: -3px -3px 5px rgba($nextiva-blue, .5);
   span {
     font-size: 1.4rem;
     @include title-font();
