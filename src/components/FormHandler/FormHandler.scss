@@ -2,16 +2,17 @@
 @import '../../styles/mixins';
 
 .create-users {
-  width: 30rem;
-  display: inline-block;
+  background-color: white;
+  width: 40%;
+  box-sizing: border-box;
+  display: inline-table;
   margin: 2rem;
   border: 1px solid grey;
   border-radius: 5px;
   padding: .5rem;
-  font-size: 1rem;
-  box-shadow: -3px -3px 5px rgba($nextiva-blue, .5);
+  box-shadow: -3px -3px 5px rgba(grey, .5);
   span {
-    font-size: 1.4rem;
+    font-size: 2rem;
     @include title-font();
     display: inline-block;
     margin-bottom: 1rem;

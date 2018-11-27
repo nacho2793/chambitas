@@ -1,0 +1,13 @@
+@import '../../../styles/constants';
+
+.nx-notifications-footer {
+  color: white;
+  grid-area: footer;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  padding: 1rem;
+  width: 100vw;
+  background-color: $nextiva-dark-blue;
+  border-top: 2px solid $nextiva-yellow;
+}

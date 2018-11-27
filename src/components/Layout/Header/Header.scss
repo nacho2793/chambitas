@@ -1,12 +1,12 @@
 @import '../../../styles/mixins';
 @import '../../../styles/constants';
 
-$ball-radius: .5rem;
+$ball-radius: 1rem;
 
 .logo {
   @include title-font();
   display: inline-block;
-  font-size: 2rem;
+  font-size: 4rem;
   position: relative;
   margin: .5rem 1rem;
   &::after {
@@ -16,7 +16,7 @@ $ball-radius: .5rem;
     height: $ball-radius;
     border-radius: 50%;
     background-color: $nextiva-yellow;
-    left: 2.2rem;
+    left: 4.3rem;
     top: 0.2rem;
   }
 }
@@ -27,5 +27,6 @@ $ball-radius: .5rem;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 3rem;
+  height: 5rem;
+  background-color: white;
 }

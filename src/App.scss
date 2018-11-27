@@ -1,3 +1,31 @@
+@import './styles/constants';
 .app {
-  margin-top: 3rem;
+  margin-top: 5rem;
+}
+
+button {
+  font-size: 1.6rem;
+  padding: .5rem 1rem;
+  margin: 0 1rem;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px grey;
+  transition: all .2s ease;
+  outline: none;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 2px 2px grey;
+  }
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0px 1px 1px grey;
+  }
+  &.success {
+    background-color: $green;
+    color: white;
+  }
+  &.cancel {
+    background-color: $grey;
+    color: white;
+  }
 }

@@ -4,7 +4,7 @@
 }
 
 html {
-  font-size: 62,5%;
+  font-size: 62.5%;
 }
 
 body {
@@ -14,6 +14,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(lightgrey,.3);
 }
 
 code {
