@@ -1,0 +1,29 @@
+@import '../../styles/mixins';
+
+.create-users {
+  width: 30rem;
+  display: inline-block;
+  margin: 2rem;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: .5rem;
+  font-size: 1rem;
+  span {
+    font-size: 1.4rem;
+    @include title-font();
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  label {
+    display: block;
+    color: #003eb2cf;
+  }
+  input {
+    font-size: inherit;
+    box-sizing: border-box;
+    border: 1px solid rgb(238, 238, 238);
+    width: 80%;
+    padding: 2px .5rem;
+    margin-bottom: 1rem;
+  }
+}

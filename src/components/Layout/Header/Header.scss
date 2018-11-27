@@ -1,0 +1,30 @@
+@import '../../../styles/mixins';
+
+$ball-radius: .5rem;
+
+.logo {
+  @include title-font();
+  display: inline-block;
+  font-size: 2rem;
+  position: relative;
+  margin: .5rem 1rem;
+  &::after {
+    content: '';
+    position: absolute;
+    width: $ball-radius;
+    height: $ball-radius;
+    border-radius: 50%;
+    background-color: #ffb200;
+    left: 2.2rem;
+    top: 0.2rem;
+  }
+}
+
+.header {
+  box-shadow: 0px 5px 5px #bababa;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 3rem;
+}
