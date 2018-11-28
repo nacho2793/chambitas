@@ -6,7 +6,7 @@ class User extends Component {
   state = {
     email: '',
     password: '',
-    users: [],
+    users: [{email: 'nacho@nextiva.com', password:'1234'}],
   };
 
   changeHandler = event => {
@@ -16,8 +16,10 @@ class User extends Component {
 
   onCreateUser= event => {
     event.preventDefault();
-    // Add a user object to the users array in the state
-    console.log('Implement the onCreateUser logic');
+    const { email, password, users } = this.state;
+    const user = { email, password }; 
+    users.push(user);
+    this.setState({ users, email: '', password: '' });
   }
   
   onCancel = event => {
@@ -25,6 +27,12 @@ class User extends Component {
     // Set the state of the component to the default
     console.log('Implement the onCancel user logic');
   }
+
+  deleteUserHandler = (index) => {
+    let { users } = this.state;
+    users = users.slice(index, 1);
+    this.setState({ users });
+  };
 
   render() {
     const { email, password } = this.state;
@@ -54,7 +62,10 @@ class User extends Component {
           </form>
         </div>
         <div className="display">
-          <UsersList users={this.state.users}/>
+          <UsersList
+            users={this.state.users}
+            deleteUserHandler={this.deleteUser}
+          />
         </div>
       </div>
     );
