@@ -4,7 +4,7 @@ import './User.scss';
 
 class User extends Component {
   state = {
-    email: '',
+    email: '@nextiva.com',
     password: '',
     users: [{email: 'nacho@nextiva.com', password:'1234'}],
   };
@@ -24,13 +24,12 @@ class User extends Component {
   
   onCancel = event => {
     event.preventDefault();
-    // Set the state of the component to the default
-    console.log('Implement the onCancel user logic');
+    this.setState({ email: '', password: '' });
   }
 
   deleteUserHandler = (index) => {
     let { users } = this.state;
-    users = users.slice(index, 1);
+    users.splice(index, 1);
     this.setState({ users });
   };
 
@@ -56,7 +55,13 @@ class User extends Component {
               onChange={this.changeHandler}
             />
             <div className="actions">
-              <button className="success" onClick={this.onCreateUser}>Create</button>
+              <button
+                className="success"
+                onClick={this.onCreateUser}
+                disabled={!email || !password}
+              >
+                Create
+              </button>
               <button className="cancel" onClick={this.onCancel}>Cancel</button>
             </div>
           </form>
@@ -64,7 +69,7 @@ class User extends Component {
         <div className="display">
           <UsersList
             users={this.state.users}
-            deleteUserHandler={this.deleteUser}
+            deleteUserHandler={this.deleteUserHandler}
           />
         </div>
       </div>

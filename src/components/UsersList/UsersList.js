@@ -4,15 +4,16 @@ import './UsersList.scss';
 const usersList = props => {
   return (
     <div className="users-list">
-      {props.users.map((numero, index) => {
+      {props.users.map((user, index) => {
+        console.log(index);
         return (
           <div className="user" key={index}>
             <div className="display">
-              <p className="email">email</p>
-              <p className="password">password</p>
+              <p className="email">{user.email}</p>
+              <p className="password">{user.password}</p>
             </div>
             <div className="action">
-              <button>
+              <button onClick={() => props.deleteUserHandler(index)}>
                 Delete
               </button>
             </div>

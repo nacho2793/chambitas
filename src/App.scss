@@ -28,4 +28,8 @@ button {
     background-color: $grey;
     color: white;
   }
+  &:disabled {
+    cursor: not-allowed;
+    background-color: rgba($green, .3);
+  }
 }
